@@ -17,6 +17,8 @@
 set -e
 
 GO_FLAGS=${GO_FLAGS:-"-tags netgo"}    # Extra go flags to use in the build.
+GOARCH=arm64
+CGO_ENABLED=1
 GO_CMD=${GO_CMD:-"install"}
 BUILD_USER=${BUILD_USER:-"${USER}@${HOSTNAME}"}
 BUILD_DATE=${BUILD_DATE:-$( date +%Y%m%d-%H:%M:%S )}
